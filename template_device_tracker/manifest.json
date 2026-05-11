@@ -1,14 +1,12 @@
 {
   "domain": "template_device_tracker",
   "name": "Template Device Tracker",
-  "codeowners": [],
+  "codeowners": ["@holdestmade"],
   "config_flow": true,
-  "dependencies": [],
-  "documentation": "https://www.home-assistant.io/integrations/template",
+  "documentation": "https://github.com/holdestmade/template_device_tracker",
+  "issues": "https://github.com/holdestmade/template_device_tracker/issues",
   "integration_type": "helper",
   "iot_class": "local_push",
-  "issue_tracker": "",
   "quality_scale": "internal",
-  "requirements": [],
   "version": "1.0.0"
 }
