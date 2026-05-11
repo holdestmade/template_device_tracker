@@ -2,7 +2,7 @@
 
 A Home Assistant custom integration that adds template-driven `device_tracker` entities
 — the one entity type the built-in `template` integration doesn't support natively.
-Made to replace the future deprecated device_tracker.see and known_devices.yaml.
+Made to replace the future deprecated `device_tracker.see` and `known_devices.yaml`
 Configure either via YAML or the UI helper flow.
 
 ## Installation
