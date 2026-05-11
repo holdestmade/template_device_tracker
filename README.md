@@ -20,9 +20,6 @@ This repository is HACS compatible.
 
 [![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=holdestmade&repository=template_device_tracker&category=integration)
 
-Once this integration is included in the HACS default repositories, the
-*Custom repositories* step can be skipped.
-
 ### Manual
 
 Copy the `custom_components/template_device_tracker` directory into
