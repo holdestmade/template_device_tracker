@@ -9,6 +9,10 @@ support natively. Configure either via YAML or the UI helper flow.
 Copy the `template_device_tracker` directory into `<config>/custom_components/`
 and restart Home Assistant.
 
+## UI configuration
+
+Settings → Devices & Services → Add Integration → "Template Device Tracker".
+
 ## YAML configuration
 
 ```yaml
@@ -34,9 +38,6 @@ template_device_tracker:
         last_seen: "{{ states.person.user.last_changed }}"
 ```
 
-## UI configuration
-
-Settings → Devices & Services → Add Integration → "Template Device Tracker".
 
 ## Fields
 
