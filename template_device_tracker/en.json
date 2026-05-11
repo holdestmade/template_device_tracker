@@ -1,0 +1,73 @@
+{
+  "title": "Template Device Tracker",
+  "config": {
+    "step": {
+      "user": {
+        "title": "Add a template device tracker",
+        "description": "Create a device_tracker entity whose state, location and motion are computed from Jinja2 templates.",
+        "data": {
+          "name": "Name",
+          "state": "State template",
+          "latitude": "Latitude template",
+          "longitude": "Longitude template",
+          "gps_accuracy": "GPS accuracy template",
+          "altitude": "Altitude template",
+          "speed": "Speed template",
+          "course": "Course template",
+          "satellites": "Satellites template",
+          "battery_level": "Battery level template",
+          "picture": "Picture template",
+          "icon": "Icon",
+          "availability": "Availability template",
+          "source_type": "Source type"
+        },
+        "data_description": {
+          "state": "Optional. Returns 'home', 'not_home' or a zone name. If omitted, lat/lon drive the state via zone resolution.",
+          "latitude": "Optional. Numeric latitude. Combine with longitude for GPS-style tracking.",
+          "longitude": "Optional. Numeric longitude.",
+          "gps_accuracy": "Optional. Horizontal accuracy in metres.",
+          "altitude": "Optional. Metres above sea level. Exposed as the 'altitude' state attribute.",
+          "speed": "Optional. Speed in m/s (or whatever unit your source produces). Exposed as the 'speed' state attribute.",
+          "course": "Optional. Heading in degrees (0-360). Exposed as the 'course' state attribute.",
+          "satellites": "Optional. Number of GPS satellites in view. Exposed as the 'satellites' state attribute.",
+          "battery_level": "Optional. Integer 0-100.",
+          "availability": "Optional. Boolean expression; entity becomes unavailable when this is false.",
+          "source_type": "Optional. Defaults to 'gps' when coordinates are present, else 'router'."
+        }
+      }
+    }
+  },
+  "options": {
+    "step": {
+      "init": {
+        "title": "Edit template device tracker",
+        "data": {
+          "name": "Name",
+          "state": "State template",
+          "latitude": "Latitude template",
+          "longitude": "Longitude template",
+          "gps_accuracy": "GPS accuracy template",
+          "altitude": "Altitude template",
+          "speed": "Speed template",
+          "course": "Course template",
+          "satellites": "Satellites template",
+          "battery_level": "Battery level template",
+          "picture": "Picture template",
+          "icon": "Icon",
+          "availability": "Availability template",
+          "source_type": "Source type"
+        }
+      }
+    }
+  },
+  "selector": {
+    "source_type": {
+      "options": {
+        "gps": "GPS",
+        "router": "Router",
+        "bluetooth": "Bluetooth",
+        "bluetooth_le": "Bluetooth LE"
+      }
+    }
+  }
+}
