@@ -7,8 +7,26 @@ Configure either via YAML or the UI helper flow.
 
 ## Installation
 
-Copy the `template_device_tracker` directory into `<config>/custom_components/`
-and restart Home Assistant.
+### HACS (recommended)
+
+This repository is HACS compatible.
+
+1. Open HACS in Home Assistant.
+2. Click the three-dot menu (top right) → **Custom repositories**.
+3. Add `https://github.com/holdestmade/template_device_tracker` with category
+   **Integration**, then click **Add**.
+4. Search for **Template Device Tracker** in HACS and click **Download**.
+5. Restart Home Assistant.
+
+[![Open your Home Assistant instance and open a repository inside the Home Assistant Community Store.](https://my.home-assistant.io/badges/hacs_repository.svg)](https://my.home-assistant.io/redirect/hacs_repository/?owner=holdestmade&repository=template_device_tracker&category=integration)
+
+Once this integration is included in the HACS default repositories, the
+*Custom repositories* step can be skipped.
+
+### Manual
+
+Copy the `custom_components/template_device_tracker` directory into
+`<config>/custom_components/` and restart Home Assistant.
 
 ## UI configuration
 
