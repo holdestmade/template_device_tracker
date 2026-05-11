@@ -14,24 +14,24 @@ and restart Home Assistant.
 ```yaml
 template_device_tracker:
   trackers:
-    - name: Simon's phone (derived)
-      unique_id: simon_phone_template
+    - name: User's phone (derived)
+      unique_id: users_phone_template
       state: >-
-        {% if is_state('person.simon', 'home') %}home
-        {% elif is_state('person.simon', 'work') %}work
+        {% if is_state('person.user', 'home') %}home
+        {% elif is_state('person.user', 'work') %}work
         {% else %}not_home{% endif %}
-      latitude: "{{ state_attr('person.simon', 'latitude') }}"
-      longitude: "{{ state_attr('person.simon', 'longitude') }}"
-      gps_accuracy: "{{ state_attr('person.simon', 'gps_accuracy') | int(0) }}"
-      altitude: "{{ state_attr('person.simon', 'altitude') | float(0) }}"
-      speed: "{{ state_attr('person.simon', 'speed') | float(0) }}"
-      course: "{{ state_attr('person.simon', 'course') | float(0) }}"
-      satellites: "{{ state_attr('person.simon', 'satellites') | int(0) }}"
-      battery_level: "{{ states('sensor.simon_phone_battery') | int(0) }}"
+      latitude: "{{ state_attr('person.user', 'latitude') }}"
+      longitude: "{{ state_attr('person.user', 'longitude') }}"
+      gps_accuracy: "{{ state_attr('person.user', 'gps_accuracy') | int(0) }}"
+      altitude: "{{ state_attr('person.user', 'altitude') | float(0) }}"
+      speed: "{{ state_attr('person.user', 'speed') | float(0) }}"
+      course: "{{ state_attr('person.user', 'course') | float(0) }}"
+      satellites: "{{ state_attr('person.user', 'satellites') | int(0) }}"
+      battery_level: "{{ states('sensor.user_phone_battery') | int(0) }}"
       icon: mdi:cellphone
-      availability: "{{ has_value('person.simon') }}"
+      availability: "{{ has_value('person.user') }}"
       attributes:
-        last_seen: "{{ states.person.simon.last_changed }}"
+        last_seen: "{{ states.person.user.last_changed }}"
 ```
 
 ## UI configuration
