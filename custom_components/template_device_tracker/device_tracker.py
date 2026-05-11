@@ -351,14 +351,14 @@ class TemplateDeviceTracker(TrackerEntity):
     @staticmethod
     def _coerce_str(result: Any) -> str | None:
         """Normalise an optional string result, treating empty/None as missing."""
-        if result in (None, "", "None"):
+        if result in (None, "", "None", STATE_UNKNOWN, STATE_UNAVAILABLE):
             return None
         return str(result)
 
     @staticmethod
     def _coerce_float(result: Any, name: str) -> float | None:
         """Coerce a result to float, returning None and logging on failure."""
-        if result in (None, "", "None"):
+        if result in (None, "", "None", STATE_UNKNOWN, STATE_UNAVAILABLE):
             return None
         try:
             return float(result)
@@ -369,7 +369,7 @@ class TemplateDeviceTracker(TrackerEntity):
     @staticmethod
     def _coerce_int(result: Any, name: str) -> int | None:
         """Coerce a result to int (via float for '95.0' style inputs)."""
-        if result in (None, "", "None"):
+        if result in (None, "", "None", STATE_UNKNOWN, STATE_UNAVAILABLE):
             return None
         try:
             return int(float(result))
